@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postuler - OFAgency</title>
+    <title>OF Agency - Agence de Gestion OnlyFans</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
@@ -111,7 +111,7 @@
         
         /* Hero Section */
         .hero {
-            height: 60vh;
+            height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/4058316/pexels-photo-4058316.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
             background-size: cover;
             background-position: center;
@@ -122,7 +122,7 @@
         }
         
         .hero-content {
-            max-width: 800px;
+            max-width: 600px;
             animation: fadeIn 1.5s ease;
         }
         
@@ -132,7 +132,7 @@
         }
         
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
             line-height: 1.2;
         }
@@ -143,144 +143,307 @@
             opacity: 0.9;
         }
         
-        /* Application Form */
-        .application-section {
-            padding: 5rem 10%;
-            background-color: white;
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
         }
         
-        .form-container {
-            max-width: 900px;
-            margin: 0 auto;
+        .secondary-button {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .secondary-button:hover {
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            padding: 3rem;
-            position: relative;
-            top: -50px;
-        }
-        
-        .form-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2rem;
             color: var(--dark);
-            position: relative;
         }
         
-        .form-title::after {
-            content: '';
-            position: absolute;
-            width: 100px;
-            height: 4px;
-            bottom: -10px;
+        /* About Section */
+        .section {
+            padding: 6rem 10%;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
             left: 50%;
             transform: translateX(-50%);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            bottom: -10px;
+            left: 25%;
             background: linear-gradient(to right, var(--primary), var(--secondary));
             border-radius: 2px;
         }
         
-        .form-group {
-            margin-bottom: 2rem;
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
         }
         
-        .form-section-title {
-            font-size: 1.3rem;
-            color: var(--secondary);
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
             margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
             color: var(--dark);
         }
         
-        input[type="text"],
-        input[type="email"],
-        input[type="number"],
-        input[type="tel"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
+        .about-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
         
-        input:focus,
-        textarea:focus,
-        select:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(255, 77, 141, 0.2);
-        }
-        
-        textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
-        .radio-group {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 0.5rem;
-        }
-        
-        .radio-option {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .checkbox-group {
+        .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 0.5rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
         
-        .checkbox-option {
+        .stat-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Services Section */
+        .services {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        /* Testimonials */
+        .testimonials-container {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            padding-bottom: 2rem;
+            scroll-snap-type: x mandatory;
+        }
+        
+        .testimonial-card {
+            min-width: 350px;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            scroll-snap-align: start;
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 1rem;
         }
         
-        .submit-btn {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            font-size: 1.1rem;
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: block;
-            width: 100%;
-            max-width: 300px;
-            margin: 2rem auto 0;
-            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.4);
+            margin-bottom: 0.2rem;
         }
         
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(156, 39, 176, 0.6);
-        }
-        
-        .disclaimer {
-            margin-top: 3rem;
-            padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: 8px;
+        .author-info p {
+            color: var(--primary);
             font-size: 0.9rem;
-            color: #666;
-            border-left: 4px solid var(--primary);
+        }
+        
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            background: white;
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            color: var(--primary);
+        }
+        
+        .faq-answer {
+            background: #f8f9fa;
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 1.5rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 5rem 10%;
+            border-radius: 15px;
+            margin: 5rem 10%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
         }
         
         /* Footer */
@@ -380,8 +543,12 @@
         
         /* Responsive */
         @media (max-width: 992px) {
-            .form-container {
-                padding: 2rem;
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
             }
         }
         
@@ -390,22 +557,20 @@
                 display: none;
             }
             
-            .hero {
-                height: 50vh;
-                padding: 0 5%;
-            }
-            
             .hero h1 {
                 font-size: 2.2rem;
             }
             
-            .form-container {
-                padding: 1.5rem;
-                top: -30px;
+            .hero-buttons {
+                flex-direction: column;
             }
             
-            .checkbox-group {
-                grid-template-columns: 1fr;
+            .section {
+                padding: 4rem 5%;
+            }
+            
+            .cta-section {
+                margin: 3rem 5%;
             }
         }
     </style>
@@ -414,271 +579,182 @@
     <!-- Header -->
     <header id="header">
         <div class="navbar">
-            <div class="logo">OFAgency</div>
+            <div class="logo">EliteVision</div>
 
-            <!-- <button class="cta-button" onclick="window.location.href='index.html#contact'">Contactez-nous</button> -->
+            <button onclick="window.location.href = 'postuler.html'" class="cta-button">Postuler maintenant</button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Rejoins l'Élite des Créateurs OnlyFans</h1>
-            <p>Postule dès maintenant pour bénéficier d'un accompagnement personnalisé et maximiser tes revenus.</p>
+            <h1>EliteVision – Libère ton potentiel, nous gérons le reste.</h1>
+            <p>Nous gérons, tu crées. Décuple tes revenus OnlyFans grâce à notre équipe dédiée 24/7.</p>
+            <div class="hero-buttons">
+                <button class="secondary-button">Postuler maintenant</button>
+            </div>
         </div>
     </section>
 
-    <!-- Application Form -->
-    <section class="application-section">
-        <div class="form-container">
-            <h2 class="form-title">Formulaire de Candidature</h2>
-            
-            <form id="applicationForm">
-                <!-- Informations Personnelles -->
-                <div class="form-group">
-                    <h3 class="form-section-title">Informations Personnelles</h3>
-                    
-                    <div class="form-group">
-                        <label for="fullName">Nom complet :</label>
-                        <input type="text" id="fullName" name="fullName" required>
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2 class="section-title">À propos de nous</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Tu n'as pas à tout faire seul(e).</h3>
+                <p>Nous t'aidons à gérer ton compte, à augmenter tes ventes, et à créer une stratégie puissante de contenu et de branding. EliteVision est née d'un constat simple : les créateurs et créatrices OnlyFans passent 80% de leur temps à gérer des tâches administratives, du marketing fastidieux et des interactions répétitives… au détriment de leur créativité et de leur épanouissement.</p>
+                <p>Fondée par d'anciens managers d'influenceurs et experts en monétisation de contenu adulte, notre agence combine l'expertise du webmarketing premium et l'intimité d'un service sur-mesure.</p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">+450%</div>
+                        <div>de revenus moyens en 6 mois</div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="age">Âge :</label>
-                        <input type="number" id="age" name="age" min="18" required>
+                    <div class="stat-item">
+                        <div class="stat-number">97%</div>
+                        <div>de satisfaction client</div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="location">Ville et pays de résidence :</label>
-                        <input type="text" id="location" name="location" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Adresse e-mail :</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Numéro de téléphone (facultatif) :</label>
-                        <input type="tel" id="phone" name="phone">
+                    <div class="stat-item">
+                        <div class="stat-number">22+</div>
+                        <div>pays couverts</div>
                     </div>
                 </div>
-                
-                <!-- Expérience et Motivation -->
-                <div class="form-group">
-                    <h3 class="form-section-title">Expérience et Motivation</h3>
-                    
-                    <div class="form-group">
-                        <label>As-tu déjà travaillé sur des plateformes similaires (ex. : Patreon, Fansly, etc.) ?</label>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="experienceYes" name="hasExperience" value="yes">
-                                <label for="experienceYes">Oui</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="experienceNo" name="hasExperience" value="no">
-                                <label for="experienceNo">Non</label>
-                            </div>
-                        </div>
-                        <div class="form-group" id="experienceDetailsGroup" style="display: none; margin-top: 1rem;">
-                            <label for="experienceDetails">Si oui, merci de préciser l'expérience :</label>
-                            <textarea id="experienceDetails" name="experienceDetails"></textarea>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="whyJoin">Pourquoi souhaites-tu rejoindre OnlyFans ?</label>
-                        <textarea id="whyJoin" name="whyJoin" required></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Es-tu à l'aise avec la gestion de ta propre image en ligne et avec les interactions publiques ?</label>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="comfortableYes" name="isComfortable" value="yes" required>
-                                <label for="comfortableYes">Oui</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="comfortableNo" name="isComfortable" value="no">
-                                <label for="comfortableNo">Non</label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="expectations">Quelles sont tes attentes en termes de revenus et d'engagement ?</label>
-                        <textarea id="expectations" name="expectations" required></textarea>
-                    </div>
-                </div>
-                
-                <!-- Contenu et Limites -->
-                <div class="form-group">
-                    <h3 class="form-section-title">Contenu et Limites</h3>
-                    
-                    <div class="form-group">
-                        <label>Quel type de contenu es-tu prêt(e) à créer ?</label>
-                        <div class="checkbox-group">
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="contentPhotos" name="contentType" value="photos">
-                                <label for="contentPhotos">Photos (modéré, explicite)</label>
-                            </div>
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="contentVideos" name="contentType" value="videos">
-                                <label for="contentVideos">Vidéos (modéré, explicite)</label>
-                            </div>
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="contentLives" name="contentType" value="lives">
-                                <label for="contentLives">Lives (modéré, explicite)</label>
-                            </div>
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="contentOther" name="contentType" value="other">
-                                <label for="contentOther">Autres (préciser) :</label>
-                            </div>
-                        </div>
-                        <input type="text" id="contentOtherDetails" name="contentOtherDetails" style="margin-top: 1rem; display: none;">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Y a-t-il des types de contenu que tu refuses de produire ?</label>
-                        <div class="checkbox-group">
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="refuseNude" name="refuseContent" value="nude">
-                                <label for="refuseNude">Photos dénudées</label>
-                            </div>
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="refuseExplicit" name="refuseContent" value="explicit">
-                                <label for="refuseExplicit">Vidéos explicites</label>
-                            </div>
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="refuseAdult" name="refuseContent" value="adult">
-                                <label for="refuseAdult">Contenu pour adultes (genre BDSM, fétichisme, etc.)</label>
-                            </div>
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="refuseOther" name="refuseContent" value="other">
-                                <label for="refuseOther">Autres (préciser) :</label>
-                            </div>
-                        </div>
-                        <input type="text" id="refuseOtherDetails" name="refuseOtherDetails" style="margin-top: 1rem; display: none;">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="interactionLimits">As-tu des préférences ou des limites concernant les interactions avec les abonnés ?</label>
-                        <textarea id="interactionLimits" name="interactionLimits"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Es-tu prêt(e) à travailler régulièrement sur la création de contenu et la gestion de ton compte ?</label>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="regularWorkYes" name="regularWork" value="yes" required>
-                                <label for="regularWorkYes">Oui</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="regularWorkNo" name="regularWork" value="no">
-                                <label for="regularWorkNo">Non</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Sécurité et Respect -->
-                <div class="form-group">
-                    <h3 class="form-section-title">Sécurité et Respect</h3>
-                    
-                    <div class="form-group">
-                        <label>Es-tu conscient(e) de l'importance de la gestion de ta sécurité personnelle et de ton anonymat si nécessaire ?</label>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="securityYes" name="securityAware" value="yes" required>
-                                <label for="securityYes">Oui</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="securityNo" name="securityAware" value="no">
-                                <label for="securityNo">Non</label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="privacyConcerns">As-tu des préoccupations concernant la confidentialité ou des questions légales liées au contenu pour adultes ?</label>
-                        <textarea id="privacyConcerns" name="privacyConcerns"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Es-tu à l'aise avec la gestion des commentaires et interactions des abonnés, parfois négatifs ou provocateurs ?</label>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="commentsYes" name="handlesComments" value="yes" required>
-                                <label for="commentsYes">Oui</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="commentsNo" name="handlesComments" value="no">
-                                <label for="commentsNo">Non</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Conditions et Engagement -->
-                <div class="form-group">
-                    <h3 class="form-section-title">Conditions et Engagement</h3>
-                    
-                    <div class="form-group">
-                        <label>Es-tu prêt(e) à signer un contrat ou un accord définissant les conditions de collaboration ?</label>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="contractYes" name="acceptsContract" value="yes" required>
-                                <label for="contractYes">Oui</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="contractNo" name="acceptsContract" value="no">
-                                <label for="contractNo">Non</label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="managementExpectations">As-tu des attentes particulières concernant le type de gestion ou de soutien que tu souhaites recevoir ?</label>
-                        <textarea id="managementExpectations" name="managementExpectations"></textarea>
-                    </div>
-                </div>
-                
-                <!-- Informations Supplémentaires -->
-                <div class="form-group">
-                    <h3 class="form-section-title">Informations Supplémentaires</h3>
-                    
-                    <div class="form-group">
-                        <label for="contentExamples">As-tu des exemples de contenu que tu as déjà créé ou que tu aimerais créer pour OnlyFans ?</label>
-                        <textarea id="contentExamples" name="contentExamples"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="personalMotivations">Quelles sont tes motivations personnelles ou professionnelles pour rejoindre la plateforme ?</label>
-                        <textarea id="personalMotivations" name="personalMotivations"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="additionalComments">Autres commentaires ou questions ?</label>
-                        <textarea id="additionalComments" name="additionalComments"></textarea>
-                    </div>
-                </div>
-                
-                <div class="disclaimer">
-                    <p><strong>Rappel Important :</strong></p>
-                    <p>Respect de la confidentialité : Toute information partagée sera strictement confidentielle.</p>
-                    <p>Consentement : Ce formulaire a pour but d'assurer une compréhension mutuelle de la collaboration et de garantir le consentement pour toute forme de contenu.</p>
-                </div>
-                
-                <button type="submit" class="submit-btn">Soumettre ma candidature</button>
-            </form>
+            </div>
+            <div class="about-image">
+                <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Équipe EliteVision">
+            </div>
         </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <h2 class="section-title">Nos Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-user-cog"></i></div>
+                <h3>Gestion de compte OnlyFans</h3>
+                <p>Nous prenons en charge tout ce qui ne nécessite pas ton talent unique : réponses aux messages, gestion des abonnements, mise en avant de ton contenu payant, et optimisation quotidienne de ta page.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-share-alt"></i></div>
+                <h3>Marketing Réseaux Sociaux</h3>
+                <p>Ton compte OnlyFans ne vit pas en autarcie. Notre équipe déploie des stratégies virales sur TikTok (sans shadowban), des campagnes Reddit ciblées, et des teasers YouTube shorts.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
+                <h3>Stratégie de contenu</h3>
+                <p>Planification mensuelle thématisée, scénarisation de shoots exclusifs, analyse des tendances niches, et coaching photo/video pour un feed irrésistible.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-comments"></i></div>
+                <h3>Chatteurs actifs 24/7</h3>
+                <p>Des experts en séduction digitale gèrent tes conversations avec un ton aligné sur ta personnalité, transformant les curiosités en abonnements récurrents.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Protection de marque</h3>
+                <p>Surveillance du web pour détecter les fuites de contenu, procédures DMCA automatisées, et conseils en sécurité numérique pour protéger ton anonymat.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Analyse et Optimisation</h3>
+                <p>Tableaux de bord personnalisés, A/B testing de contenu, analyse des pics d'activité de tes fans, et recommandations basées sur les données.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+        <h2 class="section-title">Nos Success Stories</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    "Avant EliteVision, je croulais sous les demandes de customs et je stagnais à 3K/mois. En 4 mois, ils ont restructuré ma page, lancé une campagne de teasing sur Twitter, et négocié des collaborations. Résultat ? 14K/mois et du temps pour voyager. Leur équipe est devenue ma seconde famille."
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Clara" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Clara</h4>
+                        <p>Top 0.5%</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    "En tant qu'homme dans l'industrie, j'avais du mal à me démarquer. Leur stratégie de branding 'coach sensuel' a triplé mon taux d'engagement. Maintenant, je vends même des programmes en dehors d'OF !"
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Alex" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Alex</h4>
+                        <p>Créateur Fitness</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    "Je pensais tout savoir sur OnlyFans jusqu'à ce que je travaille avec EliteVision. Leur approche data-driven a révélé des opportunités que je n'avais même pas envisagées. Mon revenu a augmenté de 600% en 5 mois, et je travaille moins qu'avant !"
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sophie" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Sophie</h4>
+                        <p>Top 1.2%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <h2 class="section-title">Questions Fréquentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Que fait une agence OnlyFans ?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Nous prenons en charge toutes les tâches chronophages de gestion de compte : interaction avec les fans, promotion sur les réseaux sociaux, optimisation du profil, création de stratégie de contenu, analyse des performances, et bien plus encore. Notre objectif est de te permettre de te concentrer sur la création pendant que nous maximisons tes revenus.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Comment garantissez-vous la confidentialité ?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Tous nos employés signent des NDAs stricts. Nous utilisons des outils sécurisés avec chiffrement de bout en bout, des VPNs, et des protocoles stricts de protection des données. Ton identité réelle n'est jamais divulguée, et nous ne stockons aucune information sensible sur nos serveurs.</p>
+                </div>
+            </div>
+            
+            
+            
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ta Success Story Commence Ici – Mais les Places Sont Limitées</h2>
+        <p>Nous travaillons uniquement avec 20 nouveaux créateurs par mois pour garantir un service d'exception. Postule aujourd'hui et reçois un audit gratuit de ton compte avec 3 pistes de growth immédiates.</p>
+        <button class="cta-button">Postuler maintenant</button>
     </section>
 
     <!-- Footer -->
     <footer id="contact">
         <div class="footer-content">
             <div class="footer-column">
-                <h3>OFAgency</h3>
+                <h3>EliteVision</h3>
                 <p>L'agence de gestion OnlyFans qui transforme les créateurs en entrepreneurs prospères.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -710,7 +786,7 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2023 OFAgency. Tous droits réservés.</p>
+            <p>&copy; 2023 EliteVision. Tous droits réservés.</p>
         </div>
     </footer>
 
@@ -725,37 +801,20 @@
             }
         });
         
-        // Show/hide experience details
-        const experienceYes = document.getElementById('experienceYes');
-        const experienceNo = document.getElementById('experienceNo');
-        const experienceDetailsGroup = document.getElementById('experienceDetailsGroup');
-        
-        experienceYes.addEventListener('change', function() {
-            if (this.checked) {
-                experienceDetailsGroup.style.display = 'block';
-            }
-        });
-        
-        experienceNo.addEventListener('change', function() {
-            if (this.checked) {
-                experienceDetailsGroup.style.display = 'none';
-            }
-        });
-        
-        // Show/hide other content type details
-        const contentOther = document.getElementById('contentOther');
-        const contentOtherDetails = document.getElementById('contentOtherDetails');
-        
-        contentOther.addEventListener('change', function() {
-            contentOtherDetails.style.display = this.checked ? 'block' : 'none';
-        });
-        
-        // Show/hide other refuse content details
-        const refuseOther = document.getElementById('refuseOther');
-        const refuseOtherDetails = document.getElementById('refuseOtherDetails');
-        
-        refuseOther.addEventListener('change', function() {
-            refuseOtherDetails.style.display = this.checked ? 'block' : 'none';
+        // FAQ accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+                
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
         });
         
         // Smooth scrolling for navigation
@@ -764,8 +823,6 @@
                 e.preventDefault();
                 
                 const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
                 const targetElement = document.querySelector(targetId);
                 
                 if (targetElement) {
@@ -776,97 +833,34 @@
                 }
             });
         });
-    
-        // Configuration Telegram
-        const telegramToken = "7998130398:AAFWUVVZdvI_95eOzfAK02fOgnuCio1PKNA";
-        const telegramChatIds = [7691383619 , 1357821570];
-    
-        // Fonction pour envoyer à Telegram
-        async function sendToTelegram(formData) {
-            let message = "📋 *Nouvelle Candidature OFAgency* 📋\n\n";
+        
+        // Animation on scroll
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.service-card, .stat-item, .testimonial-card');
             
-            // Formatage des données pour Telegram
-            message += `*Nom complet:* ${formData.fullName}\n`;
-            message += `*Âge:* ${formData.age}\n`;
-            message += `*Localisation:* ${formData.location}\n`;
-            message += `*Email:* ${formData.email}\n`;
-            message += `*Téléphone:* ${formData.phone || 'Non fourni'}\n\n`;
-            
-            message += `*Expérience:* ${formData.hasExperience === 'yes' ? 'Oui' : 'Non'}\n`;
-            if(formData.hasExperience === 'yes' && formData.experienceDetails) {
-                message += `*Détails expérience:* ${formData.experienceDetails}\n`;
-            }
-            
-            message += `*Motivation:* ${formData.whyJoin}\n`;
-            message += `*Attentes revenus:* ${formData.expectations}\n\n`;
-            
-            message += `*Types de contenu:*\n`;
-            if(formData.contentType) {
-                message += `- ${formData.contentType.join('\n- ')}\n`;
-            }
-            if(formData.contentOtherDetails) {
-                message += `Autre: ${formData.contentOtherDetails}\n`;
-            }
-            
-            // Envoi à tous les chats configurés
-            const sendPromises = telegramChatIds.map(chatId => {
-                return fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: message,
-                        parse_mode: "Markdown" // Pour le formatage en gras
-                    }),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(`Message envoyé à ${chatId}:`, data);
-                    return data;
-                })
-                .catch(error => {
-                    console.error(`Erreur avec ${chatId}:`, error);
-                    throw error;
-                });
-            });
-    
-            return Promise.all(sendPromises);
-        }
-    
-        // Gestion de la soumission du formulaire
-        document.getElementById('applicationForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            // Récupération des données du formulaire
-            const formData = {
-                fullName: this.fullName.value,
-                age: this.age.value,
-                location: this.location.value,
-                email: this.email.value,
-                phone: this.phone.value,
-                hasExperience: this.querySelector('input[name="hasExperience"]:checked')?.value,
-                experienceDetails: this.experienceDetails?.value,
-                whyJoin: this.whyJoin.value,
-                expectations: this.expectations.value,
-                contentType: Array.from(this.querySelectorAll('input[name="contentType"]:checked')).map(el => el.value),
-                contentOtherDetails: this.contentOtherDetails?.value,
-                // Ajoutez ici les autres champs du formulaire
-            };
-    
-            try {
-                // Envoi à Telegram
-                await sendToTelegram(formData);
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
                 
-                // Feedback à l'utilisateur
-                alert('Merci pour ta candidature ! Nous allons la examiner et te recontacter sous peu.');
-                this.reset();
-            } catch (error) {
-                console.error("Erreur lors de l'envoi:", error);
-                alert("Une erreur est survenue lors de l'envoi de ta candidature. Merci de réessayer ou de nous contacter directement.");
-            }
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Set initial state for animation
+        window.addEventListener('load', function() {
+            document.querySelectorAll('.service-card, .stat-item, .testimonial-card').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            animateOnScroll();
         });
+        
+        window.addEventListener('scroll', animateOnScroll);
     </script>
 </body>
 </html>
