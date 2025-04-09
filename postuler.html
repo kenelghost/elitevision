@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postuler - OFAgency</title>
+    <title>Postuler - EliteVision</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
@@ -414,7 +414,7 @@
     <!-- Header -->
     <header id="header">
         <div class="navbar">
-            <div class="logo">OFAgency</div>
+            <div class="logo">EliteVision</div>
 
             <!-- <button class="cta-button" onclick="window.location.href='index.html#contact'">Contactez-nous</button> -->
         </div>
@@ -429,256 +429,255 @@
     </section>
 
     <!-- Application Form -->
-    <section class="application-section">
-        <div class="form-container">
-            <h2 class="form-title">Formulaire de Candidature</h2>
+<!-- Application Form -->
+<section class="application-section">
+    <div class="form-container">
+        <h2 class="form-title">Formulaire de Candidature</h2>
+        
+        <form id="applicationForm">
+            <!-- Informations Personnelles -->
+            <div class="form-group">
+                <h3 class="form-section-title">💬 Informations personnelles</h3>
+                
+                <div class="form-group">
+                    <label for="fullName">Nom complet :</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Âge :</label>
+                    <input type="number" id="age" name="age" min="18" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Ville / Pays :</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Adresse e-mail :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact">Contact WhatsApp ou Telegram :</label>
+                    <input type="text" id="contact" name="contact" required>
+                </div>
+            </div>
             
-            <form id="applicationForm">
-                <!-- Informations Personnelles -->
+            <!-- Profil -->
+            <div class="form-group">
+                <h3 class="form-section-title">📸 Ton profil</h3>
+                
                 <div class="form-group">
-                    <h3 class="form-section-title">Informations Personnelles</h3>
-                    
-                    <div class="form-group">
-                        <label for="fullName">Nom complet :</label>
-                        <input type="text" id="fullName" name="fullName" required>
+                    <label>As-tu déjà un compte OnlyFans ?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="hasAccountYes" name="hasAccount" value="yes" required>
+                            <label for="hasAccountYes">Oui</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="hasAccountNo" name="hasAccount" value="no">
+                            <label for="hasAccountNo">Non</label>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="age">Âge :</label>
-                        <input type="number" id="age" name="age" min="18" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="location">Ville et pays de résidence :</label>
-                        <input type="text" id="location" name="location" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Adresse e-mail :</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Numéro de téléphone (facultatif) :</label>
-                        <input type="tel" id="phone" name="phone">
+                    <div class="form-group" id="accountLinkGroup" style="display: none; margin-top: 1rem;">
+                        <label for="accountLink">Lien du compte :</label>
+                        <input type="url" id="accountLink" name="accountLink">
                     </div>
                 </div>
                 
-                <!-- Expérience et Motivation -->
                 <div class="form-group">
-                    <h3 class="form-section-title">Expérience et Motivation</h3>
-                    
-                    <div class="form-group">
-                        <label>As-tu déjà travaillé sur des plateformes similaires (ex. : Patreon, Fansly, etc.) ?</label>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="experienceYes" name="hasExperience" value="yes">
-                                <label for="experienceYes">Oui</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="experienceNo" name="hasExperience" value="no">
-                                <label for="experienceNo">Non</label>
-                            </div>
-                        </div>
-                        <div class="form-group" id="experienceDetailsGroup" style="display: none; margin-top: 1rem;">
-                            <label for="experienceDetails">Si oui, merci de préciser l'expérience :</label>
-                            <textarea id="experienceDetails" name="experienceDetails"></textarea>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="whyJoin">Pourquoi souhaites-tu rejoindre OnlyFans ?</label>
-                        <textarea id="whyJoin" name="whyJoin" required></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Es-tu à l'aise avec la gestion de ta propre image en ligne et avec les interactions publiques ?</label>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="comfortableYes" name="isComfortable" value="yes" required>
-                                <label for="comfortableYes">Oui</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="comfortableNo" name="isComfortable" value="no">
-                                <label for="comfortableNo">Non</label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="expectations">Quelles sont tes attentes en termes de revenus et d'engagement ?</label>
-                        <textarea id="expectations" name="expectations" required></textarea>
-                    </div>
+                    <label for="socialMedia">As-tu des réseaux sociaux actifs ? (Instagram, TikTok, Twitter...)</label>
+                    <textarea id="socialMedia" name="socialMedia" placeholder="Pseudos ou liens"></textarea>
                 </div>
                 
-                <!-- Contenu et Limites -->
                 <div class="form-group">
-                    <h3 class="form-section-title">Contenu et Limites</h3>
-                    
-                    <div class="form-group">
-                        <label>Quel type de contenu es-tu prêt(e) à créer ?</label>
-                        <div class="checkbox-group">
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="contentPhotos" name="contentType" value="photos">
-                                <label for="contentPhotos">Photos (modéré, explicite)</label>
-                            </div>
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="contentVideos" name="contentType" value="videos">
-                                <label for="contentVideos">Vidéos (modéré, explicite)</label>
-                            </div>
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="contentLives" name="contentType" value="lives">
-                                <label for="contentLives">Lives (modéré, explicite)</label>
-                            </div>
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="contentOther" name="contentType" value="other">
-                                <label for="contentOther">Autres (préciser) :</label>
-                            </div>
-                        </div>
-                        <input type="text" id="contentOtherDetails" name="contentOtherDetails" style="margin-top: 1rem; display: none;">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Y a-t-il des types de contenu que tu refuses de produire ?</label>
-                        <div class="checkbox-group">
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="refuseNude" name="refuseContent" value="nude">
-                                <label for="refuseNude">Photos dénudées</label>
-                            </div>
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="refuseExplicit" name="refuseContent" value="explicit">
-                                <label for="refuseExplicit">Vidéos explicites</label>
-                            </div>
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="refuseAdult" name="refuseContent" value="adult">
-                                <label for="refuseAdult">Contenu pour adultes (genre BDSM, fétichisme, etc.)</label>
-                            </div>
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="refuseOther" name="refuseContent" value="other">
-                                <label for="refuseOther">Autres (préciser) :</label>
-                            </div>
-                        </div>
-                        <input type="text" id="refuseOtherDetails" name="refuseOtherDetails" style="margin-top: 1rem; display: none;">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="interactionLimits">As-tu des préférences ou des limites concernant les interactions avec les abonnés ?</label>
-                        <textarea id="interactionLimits" name="interactionLimits"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Es-tu prêt(e) à travailler régulièrement sur la création de contenu et la gestion de ton compte ?</label>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="regularWorkYes" name="regularWork" value="yes" required>
-                                <label for="regularWorkYes">Oui</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="regularWorkNo" name="regularWork" value="no">
-                                <label for="regularWorkNo">Non</label>
-                            </div>
-                        </div>
-                    </div>
+                    <label for="contentExperience">Depuis combien de temps crées-tu du contenu ?</label>
+                    <input type="text" id="contentExperience" name="contentExperience">
                 </div>
                 
-                <!-- Sécurité et Respect -->
                 <div class="form-group">
-                    <h3 class="form-section-title">Sécurité et Respect</h3>
-                    
-                    <div class="form-group">
-                        <label>Es-tu conscient(e) de l'importance de la gestion de ta sécurité personnelle et de ton anonymat si nécessaire ?</label>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="securityYes" name="securityAware" value="yes" required>
-                                <label for="securityYes">Oui</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="securityNo" name="securityAware" value="no">
-                                <label for="securityNo">Non</label>
-                            </div>
+                    <label>As-tu déjà travaillé avec une agence OnlyFans ?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="agencyYes" name="hasAgency" value="yes" required>
+                            <label for="agencyYes">Oui</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="agencyNo" name="hasAgency" value="no">
+                            <label for="agencyNo">Non</label>
                         </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="privacyConcerns">As-tu des préoccupations concernant la confidentialité ou des questions légales liées au contenu pour adultes ?</label>
-                        <textarea id="privacyConcerns" name="privacyConcerns"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Es-tu à l'aise avec la gestion des commentaires et interactions des abonnés, parfois négatifs ou provocateurs ?</label>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="commentsYes" name="handlesComments" value="yes" required>
-                                <label for="commentsYes">Oui</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="commentsNo" name="handlesComments" value="no">
-                                <label for="commentsNo">Non</label>
-                            </div>
-                        </div>
+                    <div class="form-group" id="agencyReasonGroup" style="display: none; margin-top: 1rem;">
+                        <label for="agencyReason">Si oui, pourquoi l'as-tu quittée ?</label>
+                        <textarea id="agencyReason" name="agencyReason"></textarea>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Type de contenu -->
+            <div class="form-group">
+                <h3 class="form-section-title">🔥 Quel type de contenu es-tu prête à proposer ?</h3>
                 
-                <!-- Conditions et Engagement -->
                 <div class="form-group">
-                    <h3 class="form-section-title">Conditions et Engagement</h3>
-                    
-                    <div class="form-group">
-                        <label>Es-tu prêt(e) à signer un contrat ou un accord définissant les conditions de collaboration ?</label>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="contractYes" name="acceptsContract" value="yes" required>
-                                <label for="contractYes">Oui</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="contractNo" name="acceptsContract" value="no">
-                                <label for="contractNo">Non</label>
-                            </div>
+                    <label>📸 Photos :</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="photoSelfie" name="contentPhotos" value="Selfies sexy">
+                            <label for="photoSelfie">Selfies sexy (habillée, lingerie)</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="photoLingerie" name="contentPhotos" value="Lingerie/Maillot">
+                            <label for="photoLingerie">Lingerie / Maillot de bain</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="photoArtistic" name="contentPhotos" value="Nudité artistique">
+                            <label for="photoArtistic">Nudité artistique (suggestive)</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="photoExplicit" name="contentPhotos" value="Nudité explicite">
+                            <label for="photoExplicit">Nudité explicite (full nude)</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="photoFetish" name="contentPhotos" value="Fétichisme">
+                            <label for="photoFetish">Fétichisme (pieds, cosplay, etc.)</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="photoCustom" name="contentPhotos" value="Contenu personnalisé">
+                            <label for="photoCustom">Contenu personnalisé (sur demande)</label>
                         </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="managementExpectations">As-tu des attentes particulières concernant le type de gestion ou de soutien que tu souhaites recevoir ?</label>
-                        <textarea id="managementExpectations" name="managementExpectations"></textarea>
-                    </div>
                 </div>
                 
-                <!-- Informations Supplémentaires -->
                 <div class="form-group">
-                    <h3 class="form-section-title">Informations Supplémentaires</h3>
-                    
-                    <div class="form-group">
-                        <label for="contentExamples">As-tu des exemples de contenu que tu as déjà créé ou que tu aimerais créer pour OnlyFans ?</label>
-                        <textarea id="contentExamples" name="contentExamples"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="personalMotivations">Quelles sont tes motivations personnelles ou professionnelles pour rejoindre la plateforme ?</label>
-                        <textarea id="personalMotivations" name="personalMotivations"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="additionalComments">Autres commentaires ou questions ?</label>
-                        <textarea id="additionalComments" name="additionalComments"></textarea>
+                    <label>🎥 Vidéos :</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="videoLifestyle" name="contentVideos" value="Sexy lifestyle">
+                            <label for="videoLifestyle">Sexy lifestyle (danse, douche, routine)</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="videoLingerie" name="contentVideos" value="Lingerie/maillot">
+                            <label for="videoLingerie">Lingerie / maillot</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="videoErotic" name="contentVideos" value="Érotiques">
+                            <label for="videoErotic">Érotiques (non explicites)</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="videoExplicit" name="contentVideos" value="Explicites">
+                            <label for="videoExplicit">Explicites (solo, toys, etc.)</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="videoCustom" name="contentVideos" value="Personnalisées">
+                            <label for="videoCustom">Personnalisées (sur demande)</label>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="disclaimer">
-                    <p><strong>Rappel Important :</strong></p>
-                    <p>Respect de la confidentialité : Toute information partagée sera strictement confidentielle.</p>
-                    <p>Consentement : Ce formulaire a pour but d'assurer une compréhension mutuelle de la collaboration et de garantir le consentement pour toute forme de contenu.</p>
+                <div class="form-group">
+                    <label>📞 Interactions :</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="interactionSexting" name="contentInteractions" value="Sexting">
+                            <label for="interactionSexting">Sexting (messages hot)</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="interactionVoice" name="contentInteractions" value="Appels vocaux">
+                            <label for="interactionVoice">Appels vocaux</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="interactionVideo" name="contentInteractions" value="Appels vidéo">
+                            <label for="interactionVideo">Appels vidéo</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="interactionRoleplay" name="contentInteractions" value="Jeux de rôle">
+                            <label for="interactionRoleplay">Jeux de rôle</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="interactionPrivate" name="contentInteractions" value="Contenu privé">
+                            <label for="interactionPrivate">Contenu privé vendu à l'unité</label>
+                        </div>
+                    </div>
                 </div>
                 
-                <button type="submit" class="submit-btn">Soumettre ma candidature</button>
-            </form>
-        </div>
-    </section>
+                <div class="form-group">
+                    <label>🎭 Style de contenu préféré :</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="styleSensual" name="contentStyle" value="Sensuel/romantique">
+                            <label for="styleSensual">Sensuel / romantique</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="styleDominant" name="contentStyle" value="Dominante">
+                            <label for="styleDominant">Dominante</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="styleSubmissive" name="contentStyle" value="Soumise">
+                            <label for="styleSubmissive">Soumise</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="stylePlayful" name="contentStyle" value="Playful/fun">
+                            <label for="stylePlayful">Playful / fun</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="styleMysterious" name="contentStyle" value="Mystérieuse">
+                            <label for="styleMysterious">Mystérieuse</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="styleOther" name="contentStyle" value="Autre">
+                            <label for="styleOther">Autre :</label>
+                            <input type="text" id="styleOtherDetails" name="styleOtherDetails" style="margin-left: 5px; display: none;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Disponibilité -->
+            <div class="form-group">
+                <h3 class="form-section-title">📅 Disponibilité</h3>
+                
+                <div class="form-group">
+                    <label for="availability">Es-tu disponible à temps plein ou partiel ?</label>
+                    <select id="availability" name="availability" required>
+                        <option value="">-- Sélectionne --</option>
+                        <option value="full">Temps plein</option>
+                        <option value="part">Temps partiel</option>
+                        <option value="variable">Variable</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Ton emploi du temps est-il flexible ?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="flexibleYes" name="isFlexible" value="yes" required>
+                            <label for="flexibleYes">Oui</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="flexibleNo" name="isFlexible" value="no">
+                            <label for="flexibleNo">Non</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="disclaimer">
+                <p><strong>🛡️ Confidentialité</strong></p>
+                <p>Toutes les informations fournies restent strictement confidentielles et protégées.</p>
+            </div>
+            
+            <button type="submit" class="submit-btn">Soumettre ma candidature</button>
+        </form>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer id="contact">
         <div class="footer-content">
             <div class="footer-column">
-                <h3>OFAgency</h3>
+                <h3>EliteVision</h3>
                 <p>L'agence de gestion OnlyFans qui transforme les créateurs en entrepreneurs prospères.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -710,167 +709,18 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2023 OFAgency. Tous droits réservés.</p>
+            <p>&copy; 2023 EliteVision. Tous droits réservés.</p>
         </div>
     </footer>
-<!-- 
-    <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // Show/hide experience details
-        const experienceYes = document.getElementById('experienceYes');
-        const experienceNo = document.getElementById('experienceNo');
-        const experienceDetailsGroup = document.getElementById('experienceDetailsGroup');
-        
-        experienceYes.addEventListener('change', function() {
-            if (this.checked) {
-                experienceDetailsGroup.style.display = 'block';
-            }
-        });
-        
-        experienceNo.addEventListener('change', function() {
-            if (this.checked) {
-                experienceDetailsGroup.style.display = 'none';
-            }
-        });
-        
-        // Show/hide other content type details
-        const contentOther = document.getElementById('contentOther');
-        const contentOtherDetails = document.getElementById('contentOtherDetails');
-        
-        contentOther.addEventListener('change', function() {
-            contentOtherDetails.style.display = this.checked ? 'block' : 'none';
-        });
-        
-        // Show/hide other refuse content details
-        const refuseOther = document.getElementById('refuseOther');
-        const refuseOtherDetails = document.getElementById('refuseOtherDetails');
-        
-        refuseOther.addEventListener('change', function() {
-            refuseOtherDetails.style.display = this.checked ? 'block' : 'none';
-        });
-        
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    
-        // Configuration Telegram
-        const telegramToken = "7998130398:AAFWUVVZdvI_95eOzfAK02fOgnuCio1PKNA";
-        const telegramChatIds = [7691383619 , 1357821570];
-    
-        // Fonction pour envoyer à Telegram
-        async function sendToTelegram(formData) {
-            let message = "📋 *Nouvelle Candidature OFAgency* 📋\n\n";
-            
-            // Formatage des données pour Telegram
-            message += `*Nom complet:* ${formData.fullName}\n`;
-            message += `*Âge:* ${formData.age}\n`;
-            message += `*Localisation:* ${formData.location}\n`;
-            message += `*Email:* ${formData.email}\n`;
-            message += `*Téléphone:* ${formData.phone || 'Non fourni'}\n\n`;
-            
-            message += `*Expérience:* ${formData.hasExperience === 'yes' ? 'Oui' : 'Non'}\n`;
-            if(formData.hasExperience === 'yes' && formData.experienceDetails) {
-                message += `*Détails expérience:* ${formData.experienceDetails}\n`;
-            }
-            
-            message += `*Motivation:* ${formData.whyJoin}\n`;
-            message += `*Attentes revenus:* ${formData.expectations}\n\n`;
-            
-            message += `*Types de contenu:*\n`;
-            if(formData.contentType) {
-                message += `- ${formData.contentType.join('\n- ')}\n`;
-            }
-            if(formData.contentOtherDetails) {
-                message += `Autre: ${formData.contentOtherDetails}\n`;
-            }
-            
-            // Envoi à tous les chats configurés
-            const sendPromises = telegramChatIds.map(chatId => {
-                return fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: message,
-                        parse_mode: "Markdown" // Pour le formatage en gras
-                    }),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(`Message envoyé à ${chatId}:`, data);
-                    return data;
-                })
-                .catch(error => {
-                    console.error(`Erreur avec ${chatId}:`, error);
-                    throw error;
-                });
-            });
-    
-            return Promise.all(sendPromises);
-        }
-    
-        // Gestion de la soumission du formulaire
-        document.getElementById('applicationForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            // Récupération des données du formulaire
-            const formData = {
-                fullName: this.fullName.value,
-                age: this.age.value,
-                location: this.location.value,
-                email: this.email.value,
-                phone: this.phone.value,
-                hasExperience: this.querySelector('input[name="hasExperience"]:checked')?.value,
-                experienceDetails: this.experienceDetails?.value,
-                whyJoin: this.whyJoin.value,
-                expectations: this.expectations.value,
-                contentType: Array.from(this.querySelectorAll('input[name="contentType"]:checked')).map(el => el.value),
-                contentOtherDetails: this.contentOtherDetails?.value,
-                // Ajoutez ici les autres champs du formulaire
-            };
-    
-            try {
-                // Envoi à Telegram
-                await sendToTelegram(formData);
-                
-                // Feedback à l'utilisateur
-                alert('Merci pour ta candidature ! Nous allons la examiner et te recontacter sous peu.');
-                this.reset();
-            } catch (error) {
-                console.error("Erreur lors de l'envoi:", error);
-                alert("Une erreur est survenue lors de l'envoi de ta candidature. Merci de réessayer ou de nous contacter directement.");
-            }
-        });
-    </script>
-j -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Configuration Telegram
+    const telegramConfig = {
+        token: "7998130398:AAFWUVVZdvI_95eOzfAK02fOgnuCio1PKNA",
+        chatIds: [7691383619, 1357821570]
+    };
+
     // Gestion du header scroll
     const header = document.getElementById('header');
     if (header) {
@@ -879,137 +729,296 @@ j -->
         });
     }
 
-    // Gestion des champs conditionnels
-    function setupConditionalFields() {
-        // Expérience professionnelle
-        const experienceYes = document.getElementById('experienceYes');
-        const experienceNo = document.getElementById('experienceNo');
-        const experienceDetailsGroup = document.getElementById('experienceDetailsGroup');
+    // Initialisation des champs conditionnels
+    initConditionalFields();
 
-        if (experienceYes && experienceNo && experienceDetailsGroup) {
-            const toggleExperienceDetails = () => {
-                experienceDetailsGroup.style.display = experienceYes.checked ? 'block' : 'none';
+    // Gestion de la soumission du formulaire
+    const applicationForm = document.getElementById('applicationForm');
+    if (applicationForm) {
+        applicationForm.addEventListener('submit', handleFormSubmission);
+    }
+
+    // Navigation fluide
+    setupSmoothScrolling();
+
+    // Fonction pour initialiser les champs conditionnels
+    function initConditionalFields() {
+        // Compte OnlyFans existant
+        setupConditionalField(
+            'input[name="hasAccount"]',
+            '#accountLinkGroup'
+        );
+
+        // Expérience avec une agence
+        setupConditionalField(
+            'input[name="hasAgency"]',
+            '#agencyReasonGroup'
+        );
+
+        // Style de contenu "Autre"
+        const styleOther = document.getElementById('styleOther');
+        const styleOtherDetails = document.getElementById('styleOtherDetails');
+        if (styleOther && styleOtherDetails) {
+            styleOther.addEventListener('change', function() {
+                styleOtherDetails.style.display = this.checked ? 'inline-block' : 'none';
+                if (this.checked) styleOtherDetails.focus();
+            });
+        }
+    }
+
+    // Fonction utilitaire pour les champs conditionnels
+    function setupConditionalField(radioSelector, targetSelector) {
+        const radios = document.querySelectorAll(radioSelector);
+        const target = document.querySelector(targetSelector);
+
+        if (radios.length && target) {
+            const toggleVisibility = () => {
+                const selectedValue = document.querySelector(`${radioSelector}:checked`)?.value;
+                target.style.display = selectedValue === 'yes' ? 'block' : 'none';
             };
-            
-            experienceYes.addEventListener('change', toggleExperienceDetails);
-            experienceNo.addEventListener('change', toggleExperienceDetails);
-            toggleExperienceDetails(); // Initial state
-        }
 
-        // Type de contenu autre
-        const contentOther = document.getElementById('contentOther');
-        const contentOtherDetails = document.getElementById('contentOtherDetails');
-        if (contentOther && contentOtherDetails) {
-            contentOther.addEventListener('change', function() {
-                contentOtherDetails.style.display = this.checked ? 'block' : 'none';
+            radios.forEach(radio => {
+                radio.addEventListener('change', toggleVisibility);
             });
-        }
 
-        // Contenu refusé autre
-        const refuseOther = document.getElementById('refuseOther');
-        const refuseOtherDetails = document.getElementById('refuseOtherDetails');
-        if (refuseOther && refuseOtherDetails) {
-            refuseOther.addEventListener('change', function() {
-                refuseOtherDetails.style.display = this.checked ? 'block' : 'none';
-            });
+            toggleVisibility(); // Initial state
         }
     }
 
     // Gestion de la soumission du formulaire
-    function setupFormSubmission() {
-        const form = document.getElementById('applicationForm');
-        if (!form) return;
-
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
+    async function handleFormSubmission(e) {
+        e.preventDefault();
+        const form = e.target;
+        const submitButton = form.querySelector('button[type="submit"]');
+        
+        // Sauvegarder le texte original du bouton
+        const originalButtonText = submitButton.textContent;
+        
+        try {
             // Désactiver le bouton pendant l'envoi
-            const submitButton = form.querySelector('button[type="submit"]');
-            const originalButtonText = submitButton.textContent;
             submitButton.disabled = true;
             submitButton.textContent = 'Envoi en cours...';
             
-            try {
-                // Valider les champs requis
-                const requiredFields = form.querySelectorAll('[required]');
-                let isValid = true;
-                
-                requiredFields.forEach(field => {
-                    if (!field.value.trim()) {
-                        field.classList.add('error');
-                        isValid = false;
-                    } else {
-                        field.classList.remove('error');
-                    }
-                });
-                
-                if (!isValid) {
-                    throw new Error('Veuillez remplir tous les champs obligatoires');
-                }
-                
-                // Préparer les données
-                const formData = new FormData(form);
-                const formObject = {};
-                formData.forEach((value, key) => {
-                    // Gérer les cases à cocher multiples
-                    if (formObject[key]) {
-                        if (!Array.isArray(formObject[key])) {
-                            formObject[key] = [formObject[key]];
-                        }
-                        formObject[key].push(value);
-                    } else {
-                        formObject[key] = value;
-                    }
-                });
-                
-                // Envoyer les données via AJAX
-                const response = await fetch('https://elitevision.tiiny.io/', {
-                    method: 'POST',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formObject)
-                });
-                
-                const result = await response.json();
-                
-                if (!response.ok || !result.success) {
-                    throw new Error(result.error || 'Erreur lors de l\'envoi du formulaire');
-                }
-                console.log(result)
-                // Succès
-                showNotification('success', 'Merci pour votre candidature ! Nous vous contacterons bientôt.');
-                form.reset();
-                
-            } catch (error) {
-                showNotification('error', error.message);
-                console.error('Erreur:', error);
-            } finally {
-                submitButton.disabled = false;
-                submitButton.textContent = originalButtonText;
+            // Valider le formulaire
+            if (!validateForm(form)) {
+                throw new Error('Veuillez remplir tous les champs obligatoires');
             }
-        });
+            
+            // Préparer les données
+            const formData = prepareFormData(form);
+            
+            // Envoyer à Telegram
+            await sendToTelegram(formData, telegramConfig);
+            
+            // Afficher le message de succès
+            showNotification('success', 'Merci pour ta candidature ! Nous allons la examiner et te recontacter sous peu.');
+            
+            // Réinitialiser le formulaire
+            form.reset();
+            
+        } catch (error) {
+            console.error('Erreur:', error);
+            showNotification('error', error.message || 'Une erreur est survenue lors de l\'envoi du formulaire');
+        } finally {
+            // Réactiver le bouton
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+        }
     }
 
-    // Afficher les notifications
-    function showNotification(type, message) {
-        const notification = document.createElement('div');
-        notification.className = `notification ${type}`;
-        notification.textContent = message;
+    // Validation du formulaire
+    function validateForm(form) {
+        let isValid = true;
         
-        document.body.appendChild(notification);
+        // Valider les champs requis
+        const requiredFields = form.querySelectorAll('[required]');
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                field.classList.add('error');
+                isValid = false;
+            } else {
+                field.classList.remove('error');
+            }
+        });
         
-        setTimeout(() => {
-            notification.classList.add('show');
-        }, 10);
+        // Validation supplémentaire pour l'email
+        const emailField = form.querySelector('input[type="email"]');
+        if (emailField && !isValidEmail(emailField.value)) {
+            emailField.classList.add('error');
+            isValid = false;
+        }
         
-        setTimeout(() => {
-            notification.classList.remove('show');
-            setTimeout(() => {
-                document.body.removeChild(notification);
-            }, 300);
-        }, 5000);
+        return isValid;
+    }
+
+    // Vérification simple d'email
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // Préparation des données du formulaire
+    function prepareFormData(form) {
+        const data = {
+            // Informations personnelles
+            personalInfo: {
+                fullName: form.fullName.value,
+                age: form.age.value,
+                location: form.location.value,
+                email: form.email.value,
+                contact: form.contact.value
+            },
+            
+            // Profil
+            profile: {
+                hasAccount: form.querySelector('input[name="hasAccount"]:checked')?.value,
+                accountLink: form.accountLink?.value,
+                socialMedia: form.socialMedia.value,
+                contentExperience: form.contentExperience.value,
+                hasAgency: form.querySelector('input[name="hasAgency"]:checked')?.value,
+                agencyReason: form.agencyReason?.value
+            },
+            
+            // Type de contenu
+            contentTypes: {
+                photos: getCheckedValues(form, 'contentPhotos'),
+                videos: getCheckedValues(form, 'contentVideos'),
+                interactions: getCheckedValues(form, 'contentInteractions'),
+                style: getContentStyles(form)
+            },
+            
+            // Disponibilité
+            availability: {
+                type: form.availability.value,
+                isFlexible: form.querySelector('input[name="isFlexible"]:checked')?.value
+            },
+            
+            // Métadonnées
+            meta: {
+                submissionDate: new Date().toISOString(),
+                userAgent: navigator.userAgent
+            }
+        };
+        
+        return data;
+    }
+
+    // Récupérer les valeurs cochées
+    function getCheckedValues(form, name) {
+        return Array.from(form.querySelectorAll(`input[name="${name}"]:checked`)).map(el => el.value);
+    }
+
+    // Récupérer les styles de contenu
+    function getContentStyles(form) {
+        return Array.from(form.querySelectorAll('input[name="contentStyle"]:checked')).map(el => 
+            el.id === 'styleOther' && form.styleOtherDetails.value 
+                ? `Autre: ${form.styleOtherDetails.value}`
+                : el.value
+        );
+    }
+
+    // Envoi à Telegram
+    async function sendToTelegram(formData, config) {
+        // Construire le message
+        const message = buildTelegramMessage(formData);
+        
+        // Envoyer à tous les chats configurés
+        const sendPromises = config.chatIds.map(chatId => {
+            return fetch(`https://api.telegram.org/bot${config.token}/sendMessage`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                    parse_mode: "Markdown"
+                }),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(`Message envoyé à ${chatId}:`, data);
+                return data;
+            })
+            .catch(error => {
+                console.error(`Erreur avec ${chatId}:`, error);
+                throw error;
+            });
+        });
+        
+        return Promise.all(sendPromises);
+    }
+
+    // Construction du message Telegram
+    function buildTelegramMessage(formData) {
+        let message = "✨ *NOUVELLE CANDIDATURE ELITEVISION* ✨\n\n";
+        
+        // Informations personnelles
+        message += "👤 *INFORMATIONS PERSONNELLES*\n";
+        message += `• Nom complet: ${formData.personalInfo.fullName}\n`;
+        message += `• Âge: ${formData.personalInfo.age}\n`;
+        message += `• Localisation: ${formData.personalInfo.location}\n`;
+        message += `• Email: ${formData.personalInfo.email}\n`;
+        message += `• Contact: ${formData.personalInfo.contact}\n\n`;
+        
+        // Profil
+        message += "📸 *PROFIL*\n";
+        message += `• Compte OnlyFans existant: ${formData.profile.hasAccount === 'yes' ? 'Oui' : 'Non'}\n`;
+        if (formData.profile.hasAccount === 'yes' && formData.profile.accountLink) {
+            message += `• Lien: ${formData.profile.accountLink}\n`;
+        }
+        message += `• Réseaux sociaux: ${formData.profile.socialMedia || 'Non spécifié'}\n`;
+        message += `• Expérience création de contenu: ${formData.profile.contentExperience || 'Non spécifié'}\n`;
+        message += `• Déjà travaillé avec une agence: ${formData.profile.hasAgency === 'yes' ? 'Oui' : 'Non'}\n`;
+        if (formData.profile.hasAgency === 'yes' && formData.profile.agencyReason) {
+            message += `• Raison départ: ${formData.profile.agencyReason}\n`;
+        }
+        message += "\n";
+        
+        // Type de contenu
+        message += "🔥 *TYPE DE CONTENU*\n";
+        message += "📸 Photos:\n";
+        message += formData.contentTypes.photos.length > 0 
+            ? formData.contentTypes.photos.map(item => `  - ${item}`).join('\n') 
+            : "  Aucune sélection";
+        message += "\n\n🎥 Vidéos:\n";
+        message += formData.contentTypes.videos.length > 0 
+            ? formData.contentTypes.videos.map(item => `  - ${item}`).join('\n') 
+            : "  Aucune sélection";
+        message += "\n\n📞 Interactions:\n";
+        message += formData.contentTypes.interactions.length > 0 
+            ? formData.contentTypes.interactions.map(item => `  - ${item}`).join('\n') 
+            : "  Aucune sélection";
+        message += "\n\n🎭 Style préféré:\n";
+        message += formData.contentTypes.style.length > 0 
+            ? formData.contentTypes.style.map(item => `  - ${item}`).join('\n') 
+            : "  Aucune sélection";
+        message += "\n\n";
+        
+        // Disponibilité
+        message += "📅 *DISPONIBILITÉ*\n";
+        message += `• Type: ${getAvailabilityText(formData.availability.type)}\n`;
+        message += `• Emploi du temps flexible: ${formData.availability.isFlexible === 'yes' ? 'Oui' : 'Non'}\n\n`;
+        
+        // Métadonnées
+        message += "🛡️ *CONFIDENTIEL* - ";
+        message += `Envoyé le ${new Date(formData.meta.submissionDate).toLocaleString()}`;
+        
+        return message;
+    }
+
+    // Texte pour la disponibilité
+    function getAvailabilityText(type) {
+        const types = {
+            'full': 'Temps plein',
+            'part': 'Temps partiel',
+            'variable': 'Variable'
+        };
+        return types[type] || 'Non spécifié';
     }
 
     // Navigation fluide
@@ -1031,12 +1040,29 @@ j -->
         });
     }
 
-    // Initialisation
-    setupConditionalFields();
-    setupFormSubmission();
-    setupSmoothScrolling();
+    // Affichage des notifications
+    function showNotification(type, message) {
+        const notification = document.createElement('div');
+        notification.className = `notification ${type}`;
+        notification.textContent = message;
+        
+        document.body.appendChild(notification);
+        
+        // Animation d'apparition
+        setTimeout(() => {
+            notification.classList.add('show');
+        }, 10);
+        
+        // Disparaît après 5 secondes
+        setTimeout(() => {
+            notification.classList.remove('show');
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 300);
+        }, 5000);
+    }
 
-    // Ajouter du style pour les notifications
+    // Ajout du style pour les notifications
     const style = document.createElement('style');
     style.textContent = `
         .notification {
@@ -1066,6 +1092,6 @@ j -->
     `;
     document.head.appendChild(style);
 });
-    </script>
+  </script>
 </body>
 </html>
